@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ComboBox?>
+
+<AnchorPane prefHeight="530.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gg.view.Controller">
+   <children>
+      <ComboBox fx:id="movieCombo" layoutX="33.0" layoutY="33.0" onAction="#handleMovieSelect" prefWidth="150.0" promptText="電影">
+      
+      </ComboBox>
+      <Label layoutX="211.0" layoutY="38.0" text="已選擇：" />
+      <Label fx:id="movieNameLabel" layoutX="263.0" layoutY="33.0" prefHeight="27.0" prefWidth="400.0" />
+      <ComboBox fx:id="timeAndHallCombo" layoutX="33.0" layoutY="100.0" onAction="#handleTimeSelect" prefWidth="150.0" promptText="時間/廳位" />
+      <Label layoutX="211.0" layoutY="105.0" text="已選擇：" />
+      <ComboBox fx:id="userCombo" layoutX="33.0" layoutY="162.0" onAction="#handleUserSelect" prefWidth="150.0" promptText="使用者" />
+      <Label layoutX="211.0" layoutY="167.0" text="已選擇：" />
+      <Button fx:id="finish" layoutX="497.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleFinish" text="完成" />
+      <Button layoutX="641.0" layoutY="483.0" mnemonicParsing="false" onAction="#handleCancel" text="取消" />
+      <Label fx:id="timeHallLabel" layoutX="270.0" layoutY="100.0" prefHeight="27.0" prefWidth="400.0" />
+      <Button layoutX="102.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleMinusNum" prefWidth="27.0" text="-" />
+      <Button layoutX="102.0" layoutY="214.0" mnemonicParsing="false" onAction="#handleAddNum" prefWidth="27.0" text="+" />
+      <Label layoutX="33.0" layoutY="252.0" prefHeight="27.0" text="選擇數量" />
+      <Label layoutX="144.0" layoutY="252.0" prefHeight="27.0" prefWidth="78.0" text="已選擇數量：" />
+      <Label fx:id="number2_label" layoutX="224.0" layoutY="252.0" prefHeight="27.0" prefWidth="27.0" />
+      <Label fx:id="number1_label" layoutX="102.0" layoutY="252.0" prefHeight="27.0" prefWidth="27.0" />
+      <Label fx:id="userNameLabel" layoutX="270.0" layoutY="162.0" prefHeight="27.0" prefWidth="400.0" />
+      <TextArea fx:id="result" layoutX="339.0" layoutY="196.0" prefHeight="269.0" prefWidth="426.0" />
+      
+      
+   </children>
+</AnchorPane>

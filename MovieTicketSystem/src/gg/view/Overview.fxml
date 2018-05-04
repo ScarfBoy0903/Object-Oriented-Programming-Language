@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gg.view.OverviewController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox layoutX="31.0" layoutY="55.0" prefHeight="250.0" prefWidth="150.0" spacing="30.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="50.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleNormalBooking" prefWidth="120.0" text="一般訂票" />
+                        <Button mnemonicParsing="false" onAction="#handleConditionalBooking" prefWidth="120.0" text="條件式訂票" />
+                        <Button mnemonicParsing="false" onAction="#handlerRefund" prefWidth="120.0" text="退票" />
+                        <Button mnemonicParsing="false" onAction="#handleSearch" prefWidth="120.0" text="查詢" />
+                        <Button mnemonicParsing="false" onAction="#handleUpdateMovie" prefHeight="27.0" prefWidth="120.0" text="更新電影" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <HBox layoutX="248.0" layoutY="344.0" prefHeight="30.0" prefWidth="150.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="30.0">
+                     <children>
+                        <Button layoutX="248.0" layoutY="357.0" mnemonicParsing="false" text="離開 EXIT" />
+                        <Button layoutX="323.0" layoutY="344.0" mnemonicParsing="false" text="HELP" />
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="onlineData" layoutX="25.0" layoutY="26.0" prefHeight="306.0" prefWidth="373.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

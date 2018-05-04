@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gg.view.SearchTimeController">
+   <children>
+      <SplitPane dividerPositions="0.26506024096385544" layoutX="337.0" layoutY="250.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="798.0">
+               <children>
+                  <ComboBox fx:id="score" layoutX="14.0" layoutY="38.0" prefWidth="50.0" promptText="分數" />
+                  <Label layoutX="27.0" layoutY="21.0" text="評分" />
+                  <Label layoutX="107.0" layoutY="21.0" text="需求座位數" />
+                  <Label layoutX="240.0" layoutY="21.0" text="電影放映時間" />
+                  <Label layoutX="406.0" layoutY="21.0" text="限定片長長度" />
+                  <ComboBox fx:id="uptime_hour" layoutX="201.0" layoutY="38.0" prefHeight="23.0" prefWidth="60.0" />
+                  <ComboBox fx:id="uptime_minute" layoutX="283.0" layoutY="38.0" prefWidth="60.0" />
+                  <Label layoutX="266.0" layoutY="42.0" text="時" />
+                  <Label layoutX="347.0" layoutY="42.0" text="分" />
+                  <ComboBox fx:id="downtime_hour" layoutX="201.0" layoutY="86.0" prefHeight="23.0" prefWidth="60.0" />
+                  <ComboBox fx:id="downtime_minute" layoutX="283.0" layoutY="86.0" prefWidth="60.0" />
+                  <Label layoutX="266.0" layoutY="90.0" text="時" />
+                  <Label layoutX="346.0" layoutY="90.0" text="分" />
+                  <Label layoutX="274.0" layoutY="66.0" text="至" />
+                  <VBox layoutX="125.0" layoutY="40.0" prefHeight="50.0" prefWidth="70.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleAddNum" prefHeight="23.0" prefWidth="25.0" text="+" />
+                        <Label fx:id="number1_label" />
+                        <Button mnemonicParsing="false" onAction="#handleMinusNum" prefHeight="23.0" prefWidth="25.0" text="-" />
+                     </children>
+                  </VBox>
+                  <Label layoutX="79.0" layoutY="107.0" text="已選擇座位數：" />
+                  <Label fx:id="number2_label" layoutX="163.0" layoutY="107.0" text="數量" />
+                  <ComboBox fx:id="smallestlong_minute" layoutX="411.0" layoutY="38.0" prefHeight="23.0" prefWidth="70.0" />
+                  <ComboBox fx:id="biggestlong_minute" layoutX="411.0" layoutY="86.0" prefHeight="23.0" prefWidth="70.0" />
+                  <Label layoutX="383.0" layoutY="42.0" text="最短" />
+                  <Label layoutX="383.0" layoutY="90.0" text="最長" />
+                  <Label layoutX="481.0" layoutY="42.0" text="分鐘" />
+                  <Label layoutX="482.0" layoutY="90.0" text="分鐘" />
+                  <Label layoutX="552.0" layoutY="21.0" text="限定區域" />
+                  <Label layoutX="686.0" layoutY="21.0" text="限定排位" />
+                  <ComboBox fx:id="region" layoutX="525.0" layoutY="46.0" prefHeight="23.0" prefWidth="103.0" />
+                  <ComboBox fx:id="Bigroom_row" layoutX="640.0" layoutY="56.0" prefHeight="23.0" prefWidth="70.0" />
+                  <RadioButton layoutX="542.0" layoutY="90.0" mnemonicParsing="false" onAction="#handleIsContinue" text="連續座位" />
+                  <Button layoutX="747.0" layoutY="89.0" mnemonicParsing="false" onAction="#conclude" text="確認" />
+                  <Label layoutX="660.0" layoutY="39.0" text="大廳" />
+                  <ComboBox fx:id="Smallroom_row" layoutX="718.0" layoutY="56.0" prefHeight="23.0" prefWidth="70.0" />
+                  <Label layoutX="738.0" layoutY="40.0" text="小廳" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView fx:id="movieTable" layoutX="299.0" layoutY="97.0" prefHeight="363.0" prefWidth="798.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="MovieNameColumn" prefWidth="178.0" text="MOVIE NAME" />
+                      <TableColumn fx:id="MovieIDColumn" prefWidth="203.0" text="MOVIE ID" />
+                        <TableColumn fx:id="MovieTimeColumn" prefWidth="416.0" text="MOVIE TIME" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

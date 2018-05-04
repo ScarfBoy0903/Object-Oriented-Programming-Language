@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gg.view.RefundOverviewController">
+   <children>
+      <SplitPane dividerPositions="0.2907949790794979" layoutX="178.0" layoutY="101.0" orientation="VERTICAL" prefHeight="480.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="35.0" layoutY="53.0" prefHeight="30.0" prefWidth="186.0" text="Enter your ticket ID :">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tkidField" layoutX="221.0" layoutY="60.0" prefHeight="23.0" prefWidth="239.0" />
+                  <Button layoutX="478.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleSentTicket" text="Send">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label layoutX="32.0" layoutY="25.0" prefHeight="49.0" prefWidth="164.0" text="Your ticket state : ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="result" layoutX="31.0" layoutY="119.0" prefHeight="49.0" prefWidth="577.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

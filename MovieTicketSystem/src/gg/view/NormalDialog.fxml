@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="530.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gg.view.NormalDialogController">
+   <children>
+      <HBox layoutX="247.0" layoutY="209.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <Button layoutX="247.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleOk" prefWidth="90.0" text="完成" />
+            <Button layoutX="319.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleCancel" prefWidth="90.0" text="取消" />
+         </children>
+      </HBox>
+      <Label layoutX="251.0" layoutY="15.0" prefHeight="27.0" prefWidth="56.0" text="已選擇：" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="10.0" />
+      <Label fx:id="movie_name" layoutX="354.0" layoutY="15.0" prefHeight="27.0" prefWidth="400.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="10.0" />
+      <Label layoutX="181.0" layoutY="65.0" prefHeight="27.0" prefWidth="56.0" text="已選擇：" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="60.0" />
+      <Label fx:id="session" layoutX="322.0" layoutY="65.0" prefHeight="27.0" prefWidth="400.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="60.0" />
+      <ComboBox fx:id="movie" layoutX="10.0" layoutY="14.0" onAction="#handleMovieSelect" prefWidth="150.0" promptText="電影" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <ComboBox fx:id="sessionMenu" layoutX="10.0" layoutY="60.0" onAction="#handdleSessionSelect" prefWidth="150.0" promptText="場次" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="60.0" />
+      <HBox layoutX="10.0" layoutY="110.0" AnchorPane.leftAnchor="80.0" />
+      <Label layoutX="170.0" layoutY="115.0" prefHeight="27.0" prefWidth="78.0" text="已選擇數量：" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="127.0" />
+      <Label layoutX="14.0" layoutY="115.0" prefHeight="27.0" text="選擇數量" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="127.0" />
+      <Label fx:id="number2_label" layoutX="242.0" layoutY="115.0" prefHeight="27.0" prefWidth="56.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="127.0" />
+      <VBox layoutX="77.0" layoutY="97.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <Button layoutX="80.0" layoutY="97.0" mnemonicParsing="false" onAction="#handleAddNum" prefWidth="27.0" text="+" />
+            <Label fx:id="number1_label" layoutX="77.0" layoutY="129.0" prefHeight="27.0" prefWidth="27.0" />
+            <Button layoutX="80.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleMinusNum" prefWidth="27.0" text="-" />
+         </children>
+      </VBox>
+      <ComboBox fx:id="regionMenu" layoutX="10.0" layoutY="199.0" onAction="#handleRegionSelect" prefWidth="150.0" promptText="選擇區域" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="200.0" />
+      <Label layoutX="170.0" layoutY="205.0" prefHeight="27.0" text="已選擇：" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="200.0" />
+      <Label fx:id="region" layoutX="226.0" layoutY="205.0" prefHeight="27.0" prefWidth="50.0" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="200.0" />
+      <RadioButton layoutX="400.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleIsContinue" text="連續座位" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="132.0" />
+      <TextArea fx:id="resultArea" layoutX="13.0" layoutY="318.0" prefHeight="186.0" prefWidth="581.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="318.0" />
+      <ComboBox fx:id="user" layoutX="10.0" layoutY="258.0" onAction="#handle_userselect" prefWidth="150.0" promptText="使用者" />
+   </children>
+</AnchorPane>
